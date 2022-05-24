@@ -1,3 +1,5 @@
+package edabit;
+
 public class stackTheBoxes {
     public static void main(String[] arg) {
         int n = 3;

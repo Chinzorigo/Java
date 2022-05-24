@@ -1,3 +1,5 @@
+package edabit;
+
 public class movieTheatreAdmittance {
     public static void main(String[] arg) {
         boolean isSupervised = false;

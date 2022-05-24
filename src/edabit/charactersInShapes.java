@@ -1,3 +1,5 @@
+package edabit;
+
 public class charactersInShapes {
     public static void main(String[] args) {
         String[] arr = {

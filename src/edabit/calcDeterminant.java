@@ -1,3 +1,5 @@
+package edabit;
+
 public class calcDeterminant {
     public static void main(String[] args) {
         int ages[][] = {
