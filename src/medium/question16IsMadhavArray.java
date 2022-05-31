@@ -1,4 +1,4 @@
-package MIU;
+package medium;
 
 public class question16IsMadhavArray {
     public static void main(String[] args) {

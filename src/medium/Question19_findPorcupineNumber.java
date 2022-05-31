@@ -1,4 +1,4 @@
-package MIU;
+package medium;
 
 public class Question19_findPorcupineNumber {
     public static void main(String[] args) {

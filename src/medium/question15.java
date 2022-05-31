@@ -1,4 +1,4 @@
-package MIU;
+package medium;
 
 public class question15 {
     public static void main(String[] args) {

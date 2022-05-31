@@ -1,4 +1,4 @@
-package MIU;
+package medium;
 
 public class IsCentered {
     public static void main(String[] args) {

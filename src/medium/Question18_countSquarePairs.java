@@ -1,4 +1,4 @@
-package MIU;
+package medium;
 
 public class Question18_countSquarePairs {
     public static void main(String[] args) {

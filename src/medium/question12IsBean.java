@@ -1,4 +1,4 @@
-package MIU;
+package medium;
 
 public class question12IsBean {
     public static void main(String[] args) {
