@@ -1,32 +1,30 @@
 package MIU;
 
-public class test {
+public class Question20_isGuthrieSequence {
     public static void main(String[] args) {
         int[] a = {8,4,2,1};
         System.out.println(isGuthrieSequence(a));
     }
-
     static int isGuthrieSequence(int[] a) {
         int length = a.length;
 
-        if(a[length-1] != 1) {
+        if (a[length - 1] != 1) {
             return 0;
         }
-
-        for (int idx = 0; idx < length-1; idx++) {
-            if(a[idx] % 2 == 0) {
-                if(a[idx+1] != a[idx] / 2) {
+        for (int i = 0; i < length - 1; i++) {
+            if (a[i] % 2 == 0) {
+                if (a[i + 1] != a[i] / 2) {
                     return 0;
                 }
 
             } else {
-                if(a[idx+1] != 3 * a[idx] + 1) {
+
+                if (a[i + 1] != 3 * a[i] + 1) {
                     return 0;
                 }
 
             }
         }
-
         return 1;
     }
 }
