@@ -2,31 +2,33 @@ package medium;
 
 public class test {
     public static void main(String[] args) {
-        int[] a = {8,4,2,1};
-        System.out.println(isGuthrieSequence(a));
+        int[] a = {6,8,1,9,6,8,6,9,9};
+        System.out.println(answerTwo(a));
     }
 
-    static int isGuthrieSequence(int[] a) {
-        int length = a.length;
+    static int answerTwo(int[] a) {
+        int maxFreq = 0;
+        int ans = -1;
 
-        if(a[length-1] != 1) {
-            return 0;
-        }
+        for(int i = 0; i < a.length-1; i++) {
+            int currentFreq = 1;
 
-        for (int idx = 0; idx < length-1; idx++) {
-            if(a[idx] % 2 == 0) {
-                if(a[idx+1] != a[idx] / 2) {
-                    return 0;
+            for(int j = i+1; j < a.length-1; j++) {
+                if(a[i] == a[j]) {
+                    ans = a[i];
+                    currentFreq++;
                 }
+            }
 
-            } else {
-                if(a[idx+1] != 3 * a[idx] + 1) {
-                    return 0;
-                }
-
+            if(maxFreq < currentFreq) {
+                maxFreq = currentFreq;
+                ans = a[i];
+            } else if (maxFreq == currentFreq){
+                ans = Math.min(ans,a[i]);
             }
         }
+        return ans;
 
-        return 1;
     }
+
 }
