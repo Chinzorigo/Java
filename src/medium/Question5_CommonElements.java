@@ -4,13 +4,14 @@ import java.util.Arrays;
 
 public class Question5_CommonElements {
     public static void main(String[] args) {
-        int[] first = {1,8,3,2};
-        int[] second = {4,6,1, 1,2, 2, 3, 3 , 1 };
+        int[] first = {1,2,3,4,5};
+        int[] second = {1 ,5};
 
         System.out.println(Arrays.toString(f(first,second)));
     }
 
     static int[] f(int[] first, int[] second) {
+        if(first == null || second == null) return null;
         int equalElement = 0;
 
         for (int idx: first) {
@@ -23,27 +24,30 @@ public class Question5_CommonElements {
         }
         System.out.println("EqualElement: " + equalElement);
 
+        int min;
+        if(first.length < second.length) {
+            min = first.length;
+        } else {
+            min = second.length;
+        }
+        System.out.println("Min element is: " + min);
+
         int[] returnArray = new int[equalElement];
-        int i = 0;
-        while (i < returnArray.length) {
-            for (int idx = 0; idx < first.length; idx++) {
-                for (int jdx = 0; jdx < second.length; jdx++) {
-                    if(first[idx] == second[jdx]) {
-                        returnArray[i] = second[jdx];
-                        System.out.println("first: " + first[idx] );
-                        System.out.println("second: " + second[jdx] );
-                        System.out.println("return: " + returnArray[i] );
-                        break;
+        int a = 0;
 
-                    }
-
+        for (int i : first) {
+            for (int j : second) {
+                //System.out.println("");
+                if (i == j) {
+                    returnArray[a] = i;
+                    a++;
+                    break;
 
                 }
+
             }
-            i++;
+            //if (a == equalElement) break;
         }
-
-
 
         return returnArray;
     }

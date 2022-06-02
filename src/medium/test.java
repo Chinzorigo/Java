@@ -1,34 +1,40 @@
 package medium;
-
+import java.util.Arrays;
 public class test {
     public static void main(String[] args) {
-        int[] a = {6,8,1,9,6,8,6,9,9};
-        System.out.println(answerTwo(a));
+        System.out.println(commonElements(new int[]{1,8,3,2}, new int[]{2,6,1}));
     }
 
-    static int answerTwo(int[] a) {
-        int maxFreq = 0;
-        int ans = -1;
-
-        for(int i = 0; i < a.length-1; i++) {
-            int currentFreq = 1;
-
-            for(int j = i+1; j < a.length-1; j++) {
-                if(a[i] == a[j]) {
-                    ans = a[i];
-                    currentFreq++;
+    static String commonElements(int[] firstArray, int[] secondArray) {
+        if (firstArray == null || secondArray == null)
+            return null;
+        if (firstArray.length == 0 || secondArray.length == 0)
+            return Arrays.toString(new int[0]);
+        int min = (firstArray.length < secondArray.length) ? firstArray.length : secondArray.length;
+        int[] firstClone, secondClone;
+        if (min == firstArray.length) {
+            firstClone = firstArray;
+            secondClone = secondArray;
+        } else {
+            firstClone = secondArray;
+            secondClone = firstArray;
+        }
+        int[] retArray = new int[min];
+        int count = 0;
+        for (int i = 0; i < firstClone.length; i++){
+            for (int j = 0; j < secondClone.length; j++) {
+                if (firstClone[i] == secondClone[j]) {
+                    retArray[count] = firstClone[i];
+                    count++;
                 }
             }
-
-            if(maxFreq < currentFreq) {
-                maxFreq = currentFreq;
-                ans = a[i];
-            } else if (maxFreq == currentFreq){
-                ans = Math.min(ans,a[i]);
-            }
         }
-        return ans;
+        int[] commonElements = new int[count];
+        for (int i = 0; i < commonElements.length; i++) {
+            commonElements[i] = retArray[i];
+        }
 
+        return Arrays.toString(commonElements);
     }
 
 }
