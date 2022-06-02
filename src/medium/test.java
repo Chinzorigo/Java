@@ -2,39 +2,23 @@ package medium;
 import java.util.Arrays;
 public class test {
     public static void main(String[] args) {
-        System.out.println(commonElements(new int[]{1,8,3,2}, new int[]{2,6,1}));
+        int[] a =  {3,3, 1,4,4,-1};
+        System.out.println(f(a));
     }
 
-    static String commonElements(int[] firstArray, int[] secondArray) {
-        if (firstArray == null || secondArray == null)
-            return null;
-        if (firstArray.length == 0 || secondArray.length == 0)
-            return Arrays.toString(new int[0]);
-        int min = (firstArray.length < secondArray.length) ? firstArray.length : secondArray.length;
-        int[] firstClone, secondClone;
-        if (min == firstArray.length) {
-            firstClone = firstArray;
-            secondClone = secondArray;
-        } else {
-            firstClone = secondArray;
-            secondClone = firstArray;
-        }
-        int[] retArray = new int[min];
-        int count = 0;
-        for (int i = 0; i < firstClone.length; i++){
-            for (int j = 0; j < secondClone.length; j++) {
-                if (firstClone[i] == secondClone[j]) {
-                    retArray[count] = firstClone[i];
-                    count++;
-                }
+    static int f(int[] a) {
+        int sumOfOdd =0, sumOfEven = 0;
+
+        for(int idx: a) {
+            if (idx % 2 == 0) {
+                sumOfEven = idx;
+                System.out.println("Even: " + idx);
+            } else {
+                sumOfOdd += idx;
+                System.out.println("Odd: " + idx);
             }
         }
-        int[] commonElements = new int[count];
-        for (int i = 0; i < commonElements.length; i++) {
-            commonElements[i] = retArray[i];
-        }
-
-        return Arrays.toString(commonElements);
+        return sumOfOdd - sumOfEven;
     }
 
 }
