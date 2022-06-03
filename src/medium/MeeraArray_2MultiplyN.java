@@ -7,9 +7,9 @@ public class MeeraArray_2MultiplyN {
     }
     static int isMeeraArray(int[] a) {
         int isMeera = 1;
-        for(int i = 0; i < a.length; i++) {
-            for(int j = 0; j < a.length; j++) {
-                if(a[i] * 2 == a[j]) {
+        for (int k : a) {
+            for (int i : a) {
+                if (k * 2 == i) {
                     isMeera = 0;
                     break;
 

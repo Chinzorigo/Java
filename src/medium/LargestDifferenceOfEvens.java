@@ -11,18 +11,18 @@ public class LargestDifferenceOfEvens {
         int countEven = 0;
         int largestDifference;
 
-        for (int idx = 0; idx < a.length; idx++) {
-            if(a[idx] % 2 == 0) {
-                if(countEven == 0) {
-                    maxEven = a[idx];
-                    minEven = a[idx];
+        for (int i : a) {
+            if (i % 2 == 0) {
+                if (countEven == 0) {
+                    maxEven = i;
+                    minEven = i;
                 }
                 countEven++;
-                if(maxEven < a[idx]) {
-                    maxEven = a[idx];
+                if (maxEven < i) {
+                    maxEven = i;
                 }
-                if(minEven > a[idx]) {
-                    minEven = a[idx];
+                if (minEven > i) {
+                    minEven = i;
                 }
             }
 

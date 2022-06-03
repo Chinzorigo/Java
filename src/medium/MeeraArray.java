@@ -7,20 +7,21 @@ public class MeeraArray {
     }
 
     static int isMeeraArray(int[] a) {
-        int isMeera = 1;
+        int isMeera;
         int atLeastOneOdd = 0;
         int sumOfLeftEven = 0;
         int sumOfRightEven = 0;
 
-        for(int i = 0; i < a.length; i++) {
-            if (a[i] % 2 != 0) {
+        for (int j : a) {
+            if (j % 2 != 0) {
                 atLeastOneOdd = 1;
+                break;
             }
         }
         if(atLeastOneOdd == 0) return 0;
 
-        for(int i = 0; i < a.length; i++) {
-            if (a[i] % 2 == 0) {
+        for (int j : a) {
+            if (j % 2 == 0) {
                 sumOfLeftEven++;
             } else {
                 break;
@@ -36,13 +37,12 @@ public class MeeraArray {
         System.out.println("Right even: " + sumOfRightEven);
         System.out.println("Left even: " + sumOfLeftEven);
 
-        if(atLeastOneOdd == 1 && sumOfLeftEven == sumOfRightEven) {
+        if(sumOfLeftEven == sumOfRightEven) {
             isMeera = 1;
-            return isMeera;
         } else {
             isMeera = 0;
-            return isMeera;
         }
+        return isMeera;
 
     }
 }
