@@ -2,7 +2,7 @@ package medium;
 
 public class LargestDifferenceOfEvens {
     public static void main(String[] args) {
-        System.out.println(largestDifferenceOfEvens(new int[ ]{1, 18, 5, 7, 33}));
+        System.out.println(largestDifferenceOfEvens(new int[ ]{1, 18, 5, -2, 7, 33}));
     }
 
     static int largestDifferenceOfEvens(int[] a) {

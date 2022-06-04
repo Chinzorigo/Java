@@ -1,8 +1,8 @@
 package medium;
-import java.util.Arrays;
-public class test {
+
+public class MaxMinV2 {
     public static void main(String[] args) {
-        int[] a =  {3,3, 1,4,1};
+        int[] a =  {2,2,2,2,2};
         System.out.println(f(a));
     }
 
