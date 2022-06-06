@@ -2,7 +2,7 @@ package medium;
 
 public class minDistance {
     public static void main(String[] args) {
-        int n = 1001;
+        int n = 15;
         System.out.println(isMinDistance(n));
     }
     static int isMinDistance(int n) {

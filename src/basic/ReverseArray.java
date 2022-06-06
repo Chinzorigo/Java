@@ -1,6 +1,8 @@
-package medium;
+package basic;
+
 import java.util.Arrays;
-public class test {
+
+public class ReverseArray {
     public static void main(String[] args) {
         int[] a =  {35,3, 1,45,1};
         System.out.println(Arrays.toString(f(a)));
@@ -17,7 +19,7 @@ public class test {
                 reverse = reverse * 10 + remainder;
                 i /= 10;
             }
-             reversedArray[j] = reverse;
+            reversedArray[j] = reverse;
             j++;
         }
 
