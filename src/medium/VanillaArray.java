@@ -1,35 +1,40 @@
 package medium;
 
-import java.util.Arrays;
-
 public class VanillaArray {
     public static void main(String[] args) {
-        int[] a = {21, 123, 789, 1234567890, 998877};
-        int len = 5;
-        System.out.println(Arrays.toString(isVanilla(a,len)));
+        int[] a = {22, -2, 22222, 222, 22222222};
+        System.out.println(isVanilla(a));
     }
 
-    static int[] isVanilla(int[] a, int len) {
-//        int onlyElement = 0;
-//        if (a.length > 0) {
-//            int remainder = a[0] % 10;
-//            onlyElement = remainder;
-//        }
-        int[] reversedArray = new int[a.length];
+    static int isVanilla(int[] a) {
+        int onlyElement = 0;
+        if (a.length > 0) {
+            int remainder = a[0] % 10;
+            onlyElement = remainder;
+        }
+        int returnIsVanilla = 1;
 
+        int n = 0;
         for(int i = 0; i < a.length; i++) {
-            int reversed = 0;
-            while(a[i] > 0) {
-                int remainder = a[i] % 10;
-                reversed = reversed * 10 + remainder;
-                a[i] /= 10;
+            if(a[i] < 0)
+                a[i] = -1 * a[i];
+
+            n = a[i];
+            while(n != 0) {
+                int remainder = n % 10;
+
+                if(remainder != onlyElement) {
+                    returnIsVanilla = 0;
+                    break;
+                }
+                n /= 10;
 
             }
-            reversedArray[i] = reversed;
+
 
         }
 
 
-        return reversedArray;
+        return returnIsVanilla;
     }
 }
