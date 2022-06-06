@@ -2,6 +2,7 @@ package medium;
 
 public class is121Array {
     public static void main(String[] args) {
+        System.out.println(is121Arrays(new int[] {1, 1, 1}));
         System.out.println(is121Arrays(new int[] {1, 2, 1}));
         System.out.println(is121Arrays(new int[] {1, 1, 2, 2, 2, 1, 1}));
         System.out.println(is121Arrays(new int[] {3, 1, 1, 2, 2, 2, 1, 1, 1}));
@@ -27,7 +28,7 @@ public class is121Array {
             }
         }
 
-        if (leftOnes != 0 && rightOnes !=0 && leftOnes == rightOnes && a.length - (leftOnes + rightOnes) > 0) {
+        if (rightOnes !=0 && leftOnes == rightOnes && a.length - (leftOnes + rightOnes) > 0) {
             for (int i = leftOnes; i < a.length - rightOnes; i++) {
                 if (a[i] != 2) {
                     return121Arrays = 0;
