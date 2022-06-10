@@ -9,6 +9,9 @@ public class AList01 {
         languages.add("Java");
         languages.add("Python");
         languages.add("Swift");
-        System.out.println("Languages: " + languages);
+        for(String language: languages) {
+            System.out.print(language);
+            System.out.print(" ");
+        }
     }
 }
