@@ -13,12 +13,12 @@ public class Question23_isEvenSpaced {
     public static int isEvenSpaced(int[] a) {
         int max = a[0], min = a[0];
 
-        for(int idx = 0; idx < a.length; idx++) {
-            if (max < a[idx]) {
-                max = a[idx];
+        for (int i : a) {
+            if (max < i) {
+                max = i;
             }
-            if (min > a[idx]) {
-                min = a[idx];
+            if (min > i) {
+                min = i;
             }
         }
         if ((max - min) % 2 == 0) {
