@@ -1,8 +1,8 @@
 package medium;
-import java.util.Arrays;
-public class test {
+
+public class OddValentV2 {
     public static void main(String[] args) {
-        int[] a =  {2, 4, 2, 6,5};
+        int[] a =  {2, 4, 8, 6,11,11};
         System.out.println(f(a));
     }
 
