@@ -8,7 +8,7 @@ public class NormalNumber {
 
     static int isNormal(int a) {
         for(int i = 2; i < a; i++) {
-            if(a % i == 0 && i % 2 != 0) {
+            if(a % i == 0 && i % 2 !ay= 0) {
                 return 0;
             }
         }
