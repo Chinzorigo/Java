@@ -1,5 +1,5 @@
 package medium;
-import java.util.Arrays;
+
 public class test {
     public static void main(String[] args) {
         int[] a =  {2, 4, 2, 6,5};
