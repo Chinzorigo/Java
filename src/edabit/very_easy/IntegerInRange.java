@@ -5,10 +5,6 @@ public class IntegerInRange {
         System.out.println(intWithinBounds(4, 1, -9));
     }
      static boolean intWithinBounds(int n, int lower, int upper) {
-        if(n >= lower && n < upper) {
-            return true;
-        } else {
-            return false;
-        }
+         return n >= lower && n < upper;
     }
 }
